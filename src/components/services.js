@@ -1,150 +1,155 @@
 function Services() {
   const services = [
     {
-      icon: "📩",
+      icon: "bi-envelope",
       title: "Email & Calendar Management",
       description:
-        "Organizing your inbox, scheduling meetings, and keeping your calendar on track so you never miss important deadlines.",
+        "Organising your inbox, scheduling meetings, and keeping your calendar on track so you never miss important deadlines.",
     },
     {
-      icon: "🔍",
+      icon: "bi-search",
       title: "Research & Analysis",
       description:
-        "Conducting market, competitor, and industry research to provide actionable insights and support informed business decisions.",
+        "Conducting market, competitor, and industry research to provide useful insights and support informed business decisions.",
     },
     {
-      icon: "💻",
+      icon: "bi-phone",
       title: "Social Media Management",
       description:
-        "Capable of handling posting, content scheduling, and engagement on platforms such as Facebook, Instagram, and LinkedIn.",
+        "Managing posting, content scheduling, and engagement across platforms such as Facebook, Instagram, and LinkedIn.",
     },
     {
-      icon: "📊",
+      icon: "bi-bar-chart",
       title: "Reports & Spreadsheets",
       description:
-        "Creating detailed reports, managing spreadsheets, and analyzing data to help you monitor business performance.",
+        "Creating reports, managing spreadsheets, and organising data to help you monitor business performance.",
     },
     {
-      icon: "📞",
+      icon: "bi-headset",
       title: "Customer Support",
       description:
-        "Managing client communication, responding to inquiries, and providing professional support to enhance customer satisfaction.",
+        "Managing client communication, responding to enquiries, and providing professional support to your customers.",
     },
     {
-      icon: "💼",
+      icon: "bi-briefcase",
       title: "Business Administration",
       description:
-        "From drafting proposals and formatting presentations to coordinating with suppliers, I provide reliable admin support that keeps your business operations professional and efficient.",
+        "From drafting proposals and formatting presentations to coordinating with suppliers, I provide reliable administrative support.",
     },
   ];
 
   return (
-    <section id="services" className="py-5 bg-light text-center">
+    <section id="services" className="services-section">
       <div className="container">
-        <h2 className="text-success mb-5">Services</h2>
-        <div className="row">
-          {services.map((s, i) => (
-            <div key={i} className="col-md-4 mb-4">
-              <div className="card h-100 shadow-sm border-2 service-card">
-                <div className="card-body">
-                  <div
-                    className="mb-3 d-inline-flex justify-content-center align-items-center rounded-circle"
-                    style={{
-                      width: "60px",
-                      height: "60px",
-                      backgroundColor: "#eaf7f0",
-                      fontSize: "30px",
-                    }}
-                    aria-label={s.title}
-                  >
-                    {s.icon}
-                  </div>
-                  <h5 className="card-title mt-3 mb-2">{s.title}</h5>
-                  <p className="card-text text-muted">{s.description}</p>
+
+        <div className="services-heading text-center">
+          <p className="section-eyebrow">
+            Flexible support for your business needs
+          </p>
+
+          <h2 className="script-title">
+            My Services
+          </h2>
+
+          <p className="section-intro mx-auto">
+            Practical and reliable support designed to give you more
+            time to focus on your business.
+          </p>
+        </div>
+
+        <div className="row g-4 mt-4">
+          {services.map((service) => (
+            <div
+              key={service.title}
+              className="col-12 col-md-6 col-lg-4"
+            >
+              <div className="service-card border-primary h-100">
+
+                <div className="service-icon">
+                  <i className={`bi ${service.icon}`}></i>
                 </div>
+
+                <h3>{service.title}</h3>
+
+                <p>{service.description}</p>
+
               </div>
             </div>
           ))}
         </div>
+
       </div>
-      <style>{`
-        .service-card {
-          transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        .service-card:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-        }
-      `}</style>
     </section>
   );
 }
+
 
 function Skills() {
   const skills = [
     {
-      icon: "📝",
+      icon: "bi-file-earmark-text",
       title: "Office Tools",
       description:
-        "Proficient in Microsoft Office Suite (Word, Excel, PowerPoint) and Google Workspace (Docs, Sheets, Drive, Calendar) for seamless document, data, and scheduling management.",
+        "Microsoft Office and Google Workspace for professional document creation, spreadsheets, presentations, file management, and scheduling.",
     },
     {
-      icon: "💬",
+      icon: "bi-chat-dots",
       title: "Communication Tools",
       description:
-        "Skilled in Slack, Microsoft Teams, Zoom,  and Google Meets to ensure smooth collaboration and professional client communication.",
+        "Slack, Microsoft Teams, Zoom, and Google Meet for smooth collaboration and professional client communication.",
     },
-
     {
-      icon: "⚡",
+      icon: "bi-lightning-charge",
       title: "Tech-Savvy",
       description:
-        "Comfortable learning and adopting new digital tools, ensuring adaptability to different client workflows and systems.",
+        "Comfortable learning and adopting new digital tools, allowing me to adapt quickly to different client workflows and systems.",
     },
   ];
 
   return (
-    <section id="skills" className="py-5 text-center bg-white">
+    <section id="skills" className="skills-section">
       <div className="container">
-        <h2 className="text-success mb-5">Technical & Digital Skills</h2>
-        <div className="row">
-          {skills.map((s, i) => (
-            <div key={i} className="col-md-4 mb-4">
-              <div className="card h-100 shadow-sm border-2 skill-card">
-                <div className="card-body">
-                  <div
-                    className="mb-3 d-inline-flex justify-content-center align-items-center rounded-circle"
-                    style={{
-                      width: "60px",
-                      height: "60px",
-                      backgroundColor: "#f0f9f4",
-                      fontSize: "28px",
-                    }}
-                    aria-label={s.title}
-                  >
-                    {s.icon}
-                  </div>
-                  <h5 className="card-title mt-3 mb-2">{s.title}</h5>
-                  <p className="card-text text-muted">{s.description}</p>
+
+        <div className="text-center">
+          <p className="section-eyebrow">
+            Tools & Capabilities
+          </p>
+
+          <h2 className="script-title">
+            My Skills
+          </h2>
+
+          <p className="section-intro mx-auto">
+            Digital tools and practical skills that help me provide
+            organised and efficient support.
+          </p>
+        </div>
+
+        <div className="row g-4 justify-content-center mt-4">
+          {skills.map((skill) => (
+            <div
+              key={skill.title}
+              className="col-12 col-md-6 col-lg-4"
+            >
+              <div className="skill-card border-primary h-100">
+
+                <div className="skill-icon">
+                  <i className={`bi ${skill.icon}`}></i>
                 </div>
+
+                <h3>{skill.title}</h3>
+
+                <p>{skill.description}</p>
+
               </div>
             </div>
           ))}
         </div>
+
       </div>
-      <style>{`
-        .skill-card {
-          transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        .skill-card:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-        }
-      `}</style>
     </section>
   );
 }
 
-// ✅ export them together
+
 export { Services, Skills };
- 

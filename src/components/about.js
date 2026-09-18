@@ -1,24 +1,89 @@
+import hazelImage from "../images/image.png";
+
 function About() {
   return (
-    <section id="about" className="about py-5 text-center bg-white">
+    <section id="about" className="about-section">
       <div className="container">
-        <h2 className="text-highlight mb-4">About Me</h2>
-        <p className="mb-3 fs-5">
-          Hi, I’m <strong>Hazel</strong> — a dedicated Virtual Assistant passionate about helping entrepreneurs
-          and small businesses stay productive and organized. I handle emails, calendars, social media support,
-          project coordination, and more, so you can focus on growing your business without the stress.
-        </p>
-        <p className="mb-3 fs-5">
-          As a <strong>Software Engineer</strong> and a Business Analyst student, I combine technical expertise
-          with strategic organization to streamline operations and optimize workflow for my clients.
-        </p>
-        <p className="mb-3 fs-5">
-          My mission is simple: to save you time, enhance efficiency, and ensure your business runs smoothly.
-          I’m reliable, detail-oriented, and committed to delivering high-quality results — every task, every time.
-        </p>
-        <p className="mt-4 fs-5">
-          Let’s work together to make your business processes effortless and productive!
-        </p>
+        <div className="row align-items-center g-5">
+
+          {/* Image */}
+          <div className="col-12 col-lg-5">
+            <div className="about-image-wrapper">
+              <img
+                src={hazelImage}
+                alt="Hazel Radingoana"
+                className="about-image"
+              />
+
+              <div className="about-image-card">
+                <span>LET'S</span>
+                <span>WORK</span>
+                <span>TOGETHER</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Content */}
+          <div className="col-12 col-lg-7">
+            <div className="about-content">
+              <p className="about-eyebrow">
+                Organised. Reliable. Dedicated.
+              </p>
+
+              <h2 className="about-title">
+                About Me
+              </h2>
+
+              <p>
+                Hi, I’m <strong>Hazel</strong>, a Virtual Assistant
+                passionate about helping entrepreneurs and small
+                businesses stay productive and organised.
+              </p>
+
+              <p>
+                I provide support with emails, calendars, social media,
+                project coordination and everyday administrative tasks,
+                giving you more time to focus on growing your business.
+              </p>
+
+              <p>
+                As a <strong>Software Engineer</strong> and Business
+                Analyst student, I combine technical skills with strong
+                organisation to help create smoother and more efficient
+                workflows.
+              </p>
+
+              <p>
+                My goal is simple: to save you time, reduce the pressure
+                of daily tasks and provide reliable support you can
+                depend on.
+              </p>
+
+              {/* Highlights */}
+              <div className="about-highlights">
+                <div className="about-highlight">
+                  <strong>100%</strong>
+                  <span>Commitment</span>
+                </div>
+
+                <div className="about-highlight">
+                  <strong>Reliable</strong>
+                  <span>Support</span>
+                </div>
+
+                <div className="about-highlight">
+                  <strong>Tailored</strong>
+                  <span>To Your Needs</span>
+                </div>
+              </div>
+
+              <a href="#contact" className="about-btn">
+                Let's Work Together
+              </a>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
   );
